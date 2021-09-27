@@ -1,0 +1,150 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Box from '@pagerland/common/src/components/Box';
+import Slider from '@pagerland/common/src/components/Slider';
+import Container from '@pagerland/common/src/components/Container';
+
+import Theme from '../../index';
+
+<Meta title="Themes/RealEstate/Components/Slider" component={Slider} />
+
+# Slider
+
+Slider is a carousel of given elements. It's build with slick https://kenwheeler.github.io/slick/.
+
+```js
+import Slider from '@pagerland/common/src/components/Slider';
+
+<Slider>
+  <div>Slide A</div>
+  <div>Slide B</div>
+  <div>Slide C</div>
+</Slider>;
+```
+
+# Variant A
+
+<Preview>
+  <Story name="Variant A">
+    <Theme>
+      <Box>
+        <Container py={100}>
+          <Slider
+            variant="a"
+            options={{
+              dots: true,
+              speed: 500,
+              slidesToShow: 1,
+              arrows: false,
+              fade: true,
+              slidesToScroll: 1,
+            }}
+          >
+            <div>
+              <Box
+                height="400px"
+                flexBox
+                alignItems="center"
+                justifyContent="center"
+                color="gray.6"
+                bg="gray.3"
+              >
+                Slide A
+              </Box>
+            </div>
+            <div>
+              <Box
+                height="400px"
+                flexBox
+                alignItems="center"
+                justifyContent="center"
+                color="gray.6"
+                bg="gray.3"
+              >
+                Slide B
+              </Box>
+            </div>
+            <div>
+              <Box
+                height="400px"
+                flexBox
+                alignItems="center"
+                justifyContent="center"
+                color="gray.6"
+                bg="gray.3"
+              >
+                Slide C
+              </Box>
+            </div>
+          </Slider>
+        </Container>
+      </Box>
+    </Theme>
+  </Story>
+</Preview>
+
+# Variant B
+
+<Preview>
+  <Story name="Variant B">
+    <Theme>
+      <Box>
+        <Container py={100}>
+          <Slider
+            variant="b"
+            options={{
+              dots: true,
+              speed: 500,
+              slidesToShow: 1,
+              arrows: false,
+              fade: true,
+              slidesToScroll: 1,
+            }}
+          >
+            <div>
+              <Box
+                height="400px"
+                flexBox
+                alignItems="center"
+                justifyContent="center"
+                color="gray.6"
+                bg="gray.3"
+              >
+                Slide A
+              </Box>
+            </div>
+            <div>
+              <Box
+                height="400px"
+                flexBox
+                alignItems="center"
+                justifyContent="center"
+                color="gray.6"
+                bg="gray.3"
+              >
+                Slide B
+              </Box>
+            </div>
+            <div>
+              <Box
+                height="400px"
+                flexBox
+                alignItems="center"
+                justifyContent="center"
+                color="gray.6"
+                bg="gray.3"
+              >
+                Slide C
+              </Box>
+            </div>
+          </Slider>
+        </Container>
+      </Box>
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+It supports also styled-system props.
+
+<Props of={Slider} />

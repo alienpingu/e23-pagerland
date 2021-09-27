@@ -1,0 +1,119 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Grid from '@pagerland/common/src/components/Grid';
+import Box from '@pagerland/common/src/components/Box';
+
+import Theme, { theme } from '../../index';
+
+<Meta title="Themes/RealEstate/System/Palette" />
+
+# Palette
+
+Convey meaning through color with a handful of color utility classes.
+
+## Colors
+
+<Preview>
+  <Theme>
+    <Grid gridTemplateColumns="repeat(4, 1fr)" gridGap={16}>
+      <Box bg="brand" height={150} />
+      <Box>
+        Brand
+        <br />
+        <small>{theme.colors.brand}</small>
+      </Box>
+    </Grid>
+  </Theme>
+</Preview>
+
+## Shades
+
+### Brand
+
+<Preview>
+  <Theme>
+    <Grid gridTemplateColumns="repeat(5, 1fr)" gridGap={16}>
+      <Box bg="shades.brand.0" height={150} />
+      <Box bg="shades.brand.1" height={150} />
+      <Box bg="shades.brand.2" height={150} />
+      <Box bg="shades.brand.3" height={150} />
+      <Box bg="shades.brand.4" height={150} />
+      <Box>
+        Brand darker
+        <br />
+        <small>{theme.colors.shades.brand[0]}</small>
+      </Box>
+      <Box>
+        Brand dark
+        <br />
+        <small>{theme.colors.shades.brand[1]}</small>
+      </Box>
+      <Box>
+        Brand default
+        <br />
+        <small>{theme.colors.shades.brand[2]}</small>
+      </Box>
+      <Box>
+        Brand light
+        <br />
+        <small>{theme.colors.shades.brand[3]}</small>
+      </Box>
+      <Box>
+        Brand lighter
+        <br />
+        <small>{theme.colors.shades.brand[3]}</small>
+      </Box>
+    </Grid>
+  </Theme>
+</Preview>
+
+### Neutrals
+
+<Preview>
+  <Theme>
+    <Grid gridTemplateColumns="repeat(7, 1fr)" gridGap={16}>
+      <Box>
+        <Box bg="gray.0" height={150} mb={3} />
+        Black
+        <br />
+        <small>{theme.colors.gray[0]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.1" height={150} mb={3} />
+        Gray darker
+        <br />
+        <small>{theme.colors.gray[1]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.2" height={150} mb={3} />
+        Gray dark
+        <br />
+        <small>{theme.colors.gray[2]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.3" height={150} mb={3} />
+        Default
+        <br />
+        <small>{theme.colors.gray[3]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.4" height={150} mb={3} />
+        Gray light
+        <br />
+        <small>{theme.colors.gray[4]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.5" height={150} mb={3} />
+        Gray lighter
+        <br />
+        <small>{theme.colors.gray[5]}</small>
+      </Box>
+      <Box>
+        <Box bg="gray.6" height={150} mb={3} border="1px solid #EAE8E9" />
+        White
+        <br />
+        <small>{theme.colors.gray[6]}</small>
+      </Box>
+    </Grid>
+  </Theme>
+</Preview>

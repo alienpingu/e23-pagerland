@@ -1,0 +1,95 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import Button from '@pagerland/common/src/components/Button';
+import ArrowRight from '@pagerland/icons/src/line/ArrowRight';
+
+import Theme from '../../index';
+
+<Meta title="Themes/RealEstate/Components/Button" component={Button} />
+
+# Button
+
+Buttons allow users to take actions, and make choices, with a single tap.
+They are also prepared to working as a custom urls or route links.
+
+```js
+import Button from '@pagerland/common/src/components/Button';
+
+<Button color="primary">Primary</Button>;
+```
+
+### Basic
+
+<Preview>
+  <Story name="Basic">
+    <Theme>
+      <Button>Default</Button>
+      <Button color="brand">Brand</Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Variants
+
+<Preview>
+  <Story name="Variants">
+    <Theme>
+      <Button variant="brand">Brand</Button>
+      <Button variant="default">Default</Button>
+      <Button variant="link">Link</Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### With icons
+
+<Preview>
+  <Story name="With icons">
+    <Theme>
+      <Button variant="brand" icon={ArrowRight}>
+        Brand
+      </Button>
+      <Button variant="default" icon={ArrowRight}>
+        Default
+      </Button>
+      <Button variant="link" icon={ArrowRight}>
+        Link
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Sizes
+
+<Preview>
+  <Story name="Sizes">
+    <Theme>
+      <Button size="small" variant="brand">
+        Small
+      </Button>
+      <Button size="normal" variant="brand">
+        Normal
+      </Button>
+      <Button size="large" variant="brand">
+        Large
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+### Customizing
+
+<Preview>
+  <Story name="Customizing">
+    <Theme>
+      <Button as="a" href="https://mypags.app" variant="primary">
+        This is a link button
+      </Button>
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+It supports also styled-system props.
+
+<Props of={Button} />

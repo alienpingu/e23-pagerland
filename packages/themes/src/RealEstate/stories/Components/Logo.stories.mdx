@@ -1,0 +1,44 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+
+import Box from '@pagerland/common/src/components/Box';
+
+import Theme from '../../index';
+import Logo from '../../components/Logo';
+
+<Meta title="Themes/RealEstate/Components/Logo" component={Logo} />
+
+# Logo
+
+Your logo component.
+
+```js
+import Logo from '@pagerland/themes/src/RealEstate/components/Logo';
+
+<Logo />;
+```
+
+## Default
+
+<Preview>
+  <Story name="Default">
+    <Theme>
+      <Logo />
+    </Theme>
+  </Story>
+</Preview>
+
+## Inverted
+
+<Preview>
+  <Story name="Inverted">
+    <Theme>
+      <Box bg="gray.0">
+        <Logo color="gray.6" />
+      </Box>
+    </Theme>
+  </Story>
+</Preview>
+
+## Props
+
+This component doesn't have specified prop types. Use default props as in svg html tag and styled system stuff.
