@@ -92,7 +92,7 @@ const Navbar = ({
             <Box flexBox alignItems="center">
               {Logo && (
                 <LogoWrapper {...LogoProps}>
-                  <Logo />
+                  <Logo stickyBool={isNavbarSticky}/>
                 </LogoWrapper>
               )}
               <Box {...MenuItemsListProps} ref={ref}>

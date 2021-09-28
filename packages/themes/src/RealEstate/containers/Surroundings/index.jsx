@@ -31,9 +31,6 @@ const Surroundings = ({
             <Fade cascade bottom duration={600}>
               <Typography {...TitleProps}>{section.title}</Typography>
               <Typography {...TextProps}>{section.text}</Typography>
-              <Button {...CtaProps} {...section.cta}>
-                {section.cta.label}
-              </Button>
             </Fade>
           </Box>
         </React.Fragment>

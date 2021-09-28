@@ -54,6 +54,23 @@ import interior1 from './assets/interiors/interior-1.jpg';
 import interior12x from './assets/interiors/interior-1@2x.jpg';
 import interior2 from './assets/interiors/interior-2.jpg';
 import interior22x from './assets/interiors/interior-2@2x.jpg';
+import interior3 from './assets/interiors/interior-3.jpg';
+import interior32x from './assets/interiors/interior-3@2x.jpg';
+import interior4 from './assets/interiors/interior-4.jpg';
+import interior42x from './assets/interiors/interior-4@2x.jpg';
+import interior5 from './assets/interiors/interior-5.jpg';
+import interior52x from './assets/interiors/interior-5@2x.jpg';
+
+import cooking1 from './assets/interiors/cooking-1.jpg';
+import cooking12x from './assets/interiors/cooking-1@2x.jpg';
+import cooking2 from './assets/interiors/cooking-2.jpg';
+import cooking22x from './assets/interiors/cooking-2@2x.jpg';
+import cooking3 from './assets/interiors/cooking-3.jpg';
+import cooking32x from './assets/interiors/cooking-3@2x.jpg';
+import cooking4 from './assets/interiors/cooking-4.jpg';
+import cooking42x from './assets/interiors/cooking-4@2x.jpg';
+import cooking5 from './assets/interiors/cooking-5.jpg';
+import cooking52x from './assets/interiors/cooking-5@2x.jpg';
 
 import surrounding1 from './assets/surroundings/surroundings-1.jpg';
 import surrounding12x from './assets/surroundings/surroundings-1@2x.jpg';
@@ -145,12 +162,12 @@ export default {
       {
         to: 'interior',
         'data-to': 'interior',
-        label: 'Interni',
+        label: 'Spazio',
       },
       {
         to: 'surroundings',
         'data-to': 'surroundings',
-        label: 'Servizi',
+        label: 'Attività',
       },
       {
         to: 'gallery',
@@ -206,9 +223,9 @@ export default {
       },
     ],
     cta: {
-      to: 'about',
-      children: 'Learn more',
-    },
+      to: 'contact',
+      children: 'Contattaci',
+    }
   },
   about: {
     title: "Lo spazio esclusivo, versatile, altamente personalizzato per aziende e professionisti.",
@@ -242,7 +259,7 @@ export default {
     title: textToMultiline`Un ambiente moderno.\nRiservato e confortevole.`,
     text:
       'Un ambiente moderno, riservato e confortevole, pensato per garantire un’esperienza di lavoro unica, facendoti sentire come fossi a casa tua. Ideale per i professionisti che cercano tranquillità e comfort per uno smartworking personalizzato, con moderne tecnologie. Lo spazio ampio con alti soffitti e finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre.',
-    CountersTitle: 'Le nostre ditazioni',
+    CountersTitle: 'Le nostre dotazioni',
     counters: [
       {
         IconProps: {
@@ -359,24 +376,24 @@ export default {
       {
         slides: [
           {
-            src: interior2,
-            srcSet: `${interior2} 1x, ${interior22x} 2x`,
+            src: interior1,
+            srcSet: `${interior1} 1x, ${interior12x} 2x`,
           },
           {
             src: interior2,
             srcSet: `${interior2} 1x, ${interior22x} 2x`,
           },
           {
-            src: interior2,
-            srcSet: `${interior2} 1x, ${interior22x} 2x`,
+            src: interior3,
+            srcSet: `${interior3} 1x, ${interior32x} 2x`,
           },
           {
-            src: interior2,
-            srcSet: `${interior2} 1x, ${interior22x} 2x`,
+            src: interior4,
+            srcSet: `${interior4} 1x, ${interior42x} 2x`,
           },
           {
-            src: interior2,
-            srcSet: `${interior2} 1x, ${interior22x} 2x`,
+            src: interior5,
+            srcSet: `${interior5} 1x, ${interior52x} 2x`,
           },
         ],
         title: "Design e arte",
@@ -385,24 +402,24 @@ export default {
       {
         slides: [
           {
-            src: interior1,
-            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+            src: cooking1,
+            srcSet: `${cooking1} 1x, ${cooking12x} 2x`,
           },
           {
-            src: interior1,
-            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+            src: cooking2,
+            srcSet: `${cooking2} 1x, ${cooking22x} 2x`,
           },
           {
-            src: interior1,
-            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+            src: cooking3,
+            srcSet: `${cooking3} 1x, ${cooking32x} 2x`,
           },
           {
-            src: interior1,
-            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+            src: cooking4,
+            srcSet: `${cooking4} 1x, ${cooking42x} 2x`,
           },
           {
-            src: interior1,
-            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+            src: cooking5,
+            srcSet: `${cooking5} 1x, ${cooking52x} 2x`,
           },
         ],
         title: 'Meeting in cucina',
@@ -421,12 +438,12 @@ export default {
         title: 'Lo spazio',
         text:
           'Lo spazio ampio con alti soffitti e finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre. A rendere la esperienza unica, confortevole e distesa un area fitness e anche un biliardo e un ping pong!',
-        cta: {
+       /* cta: {
           as: 'a',
           label: 'Learn more',
           href:
             'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-        },
+        },*/
       },
       {
         ImgProps: {
@@ -434,13 +451,13 @@ export default {
           srcSet: `${surrounding2} 1x, ${surrounding22x} 2x`,
         },
         title: 'Le attività',
-        text:textToMultiline`Smartworking\nEventi privati\nRiunioni\nPresentazioni\nMostre \nServizi fotografici\n Press-day\nCocktail\nCene aziendali\n`,
-        cta: {
+        text:textToMultiline` - Smartworking\n - Eventi privati\n - Riunioni\n - Presentazioni\n - Mostre \n - Servizi fotografici\n -  Press-day\n - Cocktail\n - Cene aziendali\n`,
+        /*cta: {
           as: 'a',
           label: 'Learn more',
           href:
             'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-        },
+        },*/
       },
       {
         ImgProps: {
@@ -450,12 +467,12 @@ export default {
         title: 'Su richiesta',
         text:
           textToMultiline`Catering e mise en place\nHostess, reception, sicurezza\nPersonalizzazione e allestimento\nService audio-video`,
-        cta: {
+        /*cta: {
           as: 'a',
           label: 'Learn more',
           href:
             'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-        },
+        },*/
       },
     ],
   },
@@ -626,6 +643,7 @@ export default {
         firstName: Yup.string().max(15, 'Inserisci massimo 15 caratteri').required('Campo obbligatorio'),
         email: Yup.string().email('Inserire una email valida').required('Campo obbligatorio'),
         message: Yup.string().min(20, 'Inserisci almeno 20 caratteri').required('Campo obbligatorio'),
+        tos: Yup.boolean().oneOf([true], 'This field must be checked')
       }),
       // eslint-disable-next-line no-undef
       onSubmit: values => window.alert(`Form sent with values ${JSON.stringify(values)}`),
@@ -660,7 +678,15 @@ export default {
           initialValue: '',
         },
       ],
+      checkbox: {
+        name: 'tos',
+        id: 'tos',
+        label: "Ho letto i Tos",
+        checked: true, 
+        onToggle: (e) => console.log(e.target.value)
+      }
     },
+
   },
   similarProperties: {
     title: 'Similar properties',

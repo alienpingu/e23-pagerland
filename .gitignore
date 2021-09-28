@@ -1,0 +1,6 @@
+.next
+.env
+/out
+.vercel
+/node_modules
+/AppData

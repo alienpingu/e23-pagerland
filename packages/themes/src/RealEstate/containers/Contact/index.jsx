@@ -14,9 +14,12 @@ import Button from '@pagerland/common/src/components/Button';
 import ArrowRight from '@pagerland/icons/src/line/ArrowRight';
 
 import Input from '@pagerland/common/src/components/Formik/Input';
+import Checkbox from '@pagerland/common/src/components/Checkbox';
 import data from '../../data';
 
 import { ImgWrapper } from './styled.components';
+
+let isChecked 
 
 const Contact = ({
   name,
@@ -91,6 +94,9 @@ const Contact = ({
                   {form.fields.map(field => (
                     <Input key={field.name} {...field} />
                   ))}
+                  
+                  <Checkbox {...form.checkbox}/>
+                  
                   <Button type="submit" {...FormButtonProps}>
                     {form.sendButtonText}
                   </Button>
@@ -131,6 +137,7 @@ Contact.propTypes = {
     validationSchema: PropTypes.object,
     onSubmit: PropTypes.func,
     fields: PropTypes.arrayOf(PropTypes.object),
+    checkbox: PropTypes.object,
   }),
   WrapperProps: PropTypes.object,
   ContainerProps: PropTypes.object,

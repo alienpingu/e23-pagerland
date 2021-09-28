@@ -24,6 +24,7 @@ const Welcome = ({
   price,
   features,
   cta,
+  cta_mobile,
   WrapperProps,
   InnerProps,
   ContainerProps,
@@ -83,6 +84,7 @@ Welcome.propTypes = {
     }),
   ),
   cta: PropTypes.object,
+  cta_mobile: PropTypes.object,
 };
 
 Welcome.defaultProps = {
