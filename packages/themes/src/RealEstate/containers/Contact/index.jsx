@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import { Form, Formik } from 'formik';
 
@@ -19,7 +19,7 @@ import data from '../../data';
 
 import { ImgWrapper } from './styled.components';
 
-let isChecked 
+
 
 const Contact = ({
   name,
@@ -42,73 +42,76 @@ const Contact = ({
   FormProps,
   FormTitleProps,
   FormButtonProps,
-}) => (
-  <Box name={name} {...WrapperProps}>
-    <Container {...ContainerProps}>
-      <Fade bottom cascade duration={600}>
-        <Typography {...TitleProps}>{title}</Typography>
-      </Fade>
-      <Grid {...GridProps}>
-        <Fade left cascade duration={600}>
-          <ImgWrapper>
-            <Img {...thumbnail} {...ImgProps} />
-          </ImgWrapper>
+}) => {
+  let [checked, setChecked] = useState(false) 
+  return(
+    <Box name={name} {...WrapperProps}>
+      <Container {...ContainerProps}>
+        <Fade bottom cascade duration={600}>
+          <Typography {...TitleProps}>{title}</Typography>
         </Fade>
-        <Box {...DetailsProps}>
-          <Fade bottom cascade duration={600}>
-            <Typography {...DetailsTitleProps}>{details.title}</Typography>
-            <Typography {...DetailsTextProps}>{details.text}</Typography>
-            {details.info.map((item, key) => (
-              <Box key={key} {...DetailsInfoItemProps}>
-                <Icon icon={item.icon} {...DetailsIconProps} />
-                {item.text}
-              </Box>
-            ))}
+        <Grid {...GridProps}>
+          <Fade left cascade duration={600}>
+            <ImgWrapper>
+              <Img {...thumbnail} {...ImgProps} />
+            </ImgWrapper>
           </Fade>
-{/*          <Box {...SocialLinksProps}>
-            {details.socialLinks?.map((socialLink, key) => (
-              <Fade left duration={600} key={socialLink.title} distance="10px" delay={100 * key}>
-                <Button as="a" href={socialLink.href} title={socialLink.title} {...SocialLinkProps}>
-                  <Icon icon={socialLink.icon} />
-                </Button>
-              </Fade>
-            ))}
-          </Box>*/}
-        </Box>
-        <Box {...FormProps}>
-          <Formik
-            validationSchema={form.validationSchema}
-            onSubmit={form.onSubmit}
-            initialValues={form.fields.reduce(
-              (acc, field) => ({
-                ...acc,
-                [field.name]: field.initialValue,
-              }),
-              {},
-            )}
-          >
-            <Form>
-              <Fade cascade bottom duration={600}>
-                <Typography {...FormTitleProps}>{form.title}</Typography>
-                <div>
-                  {form.fields.map(field => (
-                    <Input key={field.name} {...field} />
-                  ))}
-                  
-                  <Checkbox {...form.checkbox}/>
-                  
-                  <Button type="submit" {...FormButtonProps}>
-                    {form.sendButtonText}
+          <Box {...DetailsProps}>
+            <Fade bottom cascade duration={600}>
+              <Typography {...DetailsTitleProps}>{details.title}</Typography>
+              <Typography {...DetailsTextProps}>{details.text}</Typography>
+              {details.info.map((item, key) => (
+                <Box key={key} {...DetailsInfoItemProps}>
+                  <Icon icon={item.icon} {...DetailsIconProps} />
+                  {item.text}
+                </Box>
+              ))}
+            </Fade>
+  {/*          <Box {...SocialLinksProps}>
+              {details.socialLinks?.map((socialLink, key) => (
+                <Fade left duration={600} key={socialLink.title} distance="10px" delay={100 * key}>
+                  <Button as="a" href={socialLink.href} title={socialLink.title} {...SocialLinkProps}>
+                    <Icon icon={socialLink.icon} />
                   </Button>
-                </div>
-              </Fade>
-            </Form>
-          </Formik>
-        </Box>
-      </Grid>
-    </Container>
-  </Box>
-);
+                </Fade>
+              ))}
+            </Box>*/}
+          </Box>
+          <Box {...FormProps}>
+            <Formik
+              validationSchema={form.validationSchema}
+              onSubmit={form.onSubmit}
+              initialValues={form.fields.reduce(
+                (acc, field) => ({
+                  ...acc,
+                  [field.name]: field.initialValue,
+                }),
+                {},
+              )}
+            >
+              <Form>
+                <Fade cascade bottom duration={600}>
+                  <Typography {...FormTitleProps}>{form.title}</Typography>
+                  <div>
+                    {form.fields.map(field => (
+                      <Input key={field.name} {...field} />
+                    ))}
+                    
+                    <Checkbox {...form.checkbox} value={checked} onToggle={() => setChecked(!checked)}/>
+                    
+                    <Button type="submit" {...FormButtonProps}>
+                      {form.sendButtonText}
+                    </Button>
+                  </div>
+                </Fade>
+              </Form>
+            </Formik>
+          </Box>
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
 
 Contact.propTypes = {
   name: PropTypes.string.isRequired,

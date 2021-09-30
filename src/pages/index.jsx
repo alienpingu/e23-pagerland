@@ -33,7 +33,7 @@ const RealEstate = ({ url }) => (
     <SEO title="E23" />
 
     <Navbar />
-    <Welcome name="" />
+    <Welcome name="welcome" />
     <About name="about" />
     <Location name="location" />
     <Exterior name="exterior" />

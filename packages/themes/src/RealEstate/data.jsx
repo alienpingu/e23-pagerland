@@ -225,6 +225,10 @@ export default {
     cta: {
       to: 'contact',
       children: 'Contattaci',
+    },
+    cta_mobile: {
+      href:'tel:+3965465489',
+      children: 'Chiamaci'
     }
   },
   about: {
@@ -682,8 +686,7 @@ export default {
         name: 'tos',
         id: 'tos',
         label: "Ho letto i Tos",
-        checked: true, 
-        onToggle: (e) => console.log(e.target.value)
+        initialValue:false
       }
     },
 

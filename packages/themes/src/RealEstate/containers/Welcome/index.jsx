@@ -15,6 +15,8 @@ import Grid from '@pagerland/common/src/components/Grid';
 import Icon from '@pagerland/common/src/components/Icon';
 import ParallaxBackground from '../../components/ParallaxBackground';
 
+import './style.css'
+
 import data from '../../data';
 
 const Welcome = ({
@@ -53,7 +55,10 @@ const Welcome = ({
                 </Box>
               ))}
             </Grid>*/}
-            <Button {...CtaProps} {...cta} />
+            <Button id="btn-welcome-desktop" {...CtaProps} {...cta} />
+
+            <a id="btn-welcome-mobile" variant="brand" className="sc-jSFkmK frPUkr" href="tel:9138471984"><span>Chiamaci</span></a>
+
           </Fade>
         </Box>
       </Container>

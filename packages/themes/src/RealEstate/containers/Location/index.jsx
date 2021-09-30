@@ -9,11 +9,11 @@ import Container from '@pagerland/common/src/components/Container';
 import Icon from '@pagerland/common/src/components/Icon';
 import Typography from '@pagerland/common/src/components/Typography';
 import Grid from '@pagerland/common/src/components/Grid';
-import GoogleMaps from '@pagerland/common/src/components/GoogleMaps';
+// import GoogleMaps from '@pagerland/common/src/components/GoogleMaps';
 
 import data from '../../data';
 import { googleMapsStyle } from '../../styles';
-import Pin from '../../assets/Pin.svg';
+// import Pin from '../../assets/Pin.svg';
 
 const Location = ({
   name,
@@ -34,7 +34,7 @@ const Location = ({
   CounterIconProps,
   CounterValueProps,
   CounterTitleProps,
-  GoogleMapsProps,
+  // GoogleMapsProps,
 }) => (
   <Box name={name} {...WrapperProps}>
     <Container {...ContainerProps}>
@@ -63,9 +63,9 @@ const Location = ({
         </Grid>
       </Container>
     </Box>
-    <GoogleMaps {...GoogleMapsProps} center={map.cords}>
+{/*    <GoogleMaps {...GoogleMapsProps} center={map.cords}>
       <Marker icon={Pin} position={map.cords} />
-    </GoogleMaps>
+    </GoogleMaps>*/}
   </Box>
 );
 
