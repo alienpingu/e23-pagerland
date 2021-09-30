@@ -602,11 +602,11 @@ export default {
       info: [
         {
           icon: Building,
-          text: 'E23 Srl',
+          text: 'E23 SRL',
         },
         {
           icon: MapMarker,
-          text: `Via A. Busti 1, 20131 Milano`,
+          text: `Via Averardo Buschi 1 20131 Milano (MI)`,
         },
         {
           icon: Phone,
