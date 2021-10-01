@@ -606,7 +606,7 @@ export default {
         },
         {
           icon: MapMarker,
-          text: `Via Averardo Buschi 1 20131 Milano (MI)`,
+          text: textToMultiline`Via Averardo Buschi 1\n 20131 Milano (MI)`,
         },
         {
           icon: Phone,
