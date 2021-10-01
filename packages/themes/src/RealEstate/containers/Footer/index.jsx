@@ -69,7 +69,7 @@ const Footer = ({
       </Grid>*/}
       <Box {...CopyrightWrapperProps}>
         <Typography {...CopyrightTextProps}>{copyright}</Typography>
-
+        <Typography as="a" href="/policy" {...CopyrightTextProps}>Privacy policy - Cookie policy</Typography>
         <Box {...SocialLinksProps}>
           {socialLinks?.map((socialLink, key) => (
             <Fade left duration={600} key={socialLink.title} distance="10px" delay={100 * key}>
@@ -216,7 +216,7 @@ Footer.defaultProps = {
     flexBox: true,
   },
   SocialLinkProps: {
-    color: 'brand',
+    color: 'white',
     p: 0,
     fontSize: 24,
     ml: {

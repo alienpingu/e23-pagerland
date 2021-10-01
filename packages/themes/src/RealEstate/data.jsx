@@ -140,8 +140,8 @@ export default {
   navbar: {
     links: [
       {
-        to: '',
-        'data-to': '',
+        to: 'welcome',
+        'data-to': 'welcome',
         label: 'Home',
       },
       {
