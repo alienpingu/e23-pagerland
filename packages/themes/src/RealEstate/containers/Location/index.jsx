@@ -126,6 +126,7 @@ Location.defaultProps = {
   TextProps: {
     variant: 'body1',
     mb: 110,
+    mt: 50,
     color: 'gray.1',
   },
   CountersWrapperProps: {

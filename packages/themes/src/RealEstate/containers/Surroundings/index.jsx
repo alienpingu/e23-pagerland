@@ -81,7 +81,7 @@ Surroundings.defaultProps = {
     },
   },
   CaptionProps: {
-    bg: 'gray.0',
+    bg: '#174A5B',
     p: {
       _: 4,
       lg: 5,

@@ -7,7 +7,7 @@ export const colors = {
   error: '#EB5757',
   success: '#27AE60',
   shades: {
-    brand: ['#7CA2AE', '#F7C600', '#FFD600', '#528190', '#FFE873'],
+    brand: ['#7CA2AE', '#F7C600', '#FFD600', '#7CA2AE', '#B3CCD4'],
   },
   gray: ['#262522', '#201F1D', '#ADADAB', '#E0E0DF', '#EBEAEA', '#F9F9F9', '#FFFFFF'],
   real: "#174a5b"

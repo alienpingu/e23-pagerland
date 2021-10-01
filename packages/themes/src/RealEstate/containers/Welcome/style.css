@@ -2,6 +2,12 @@
 #btn-welcome-desktop {
   display:none;
 }
+.btn-welcome-desktop:hover, 
+.btn-welcome-desktop:active, 
+.btn-welcome-desktop:focus {
+  background: #7CA2AE;
+  background-color: #7CA2AE;
+}
 #btn-welcome-mobile {
   display: inline-block;
   position: relative;

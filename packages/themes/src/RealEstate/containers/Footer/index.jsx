@@ -121,7 +121,7 @@ Footer.defaultProps = {
   ...data.footer,
   copyright: data.copyright,
   WrapperProps: {
-    bg: 'gray.0',
+    bg: '#174A5B',
     pt: {
       _: 48,
       md: 48,
