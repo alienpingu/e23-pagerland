@@ -677,7 +677,7 @@ export default {
         {
           name: 'message',
           label: 'Message',
-          placeholder: 'Start typing here...',
+          placeholder: 'Scrivi qualcosa...',
           multiline: true,
           initialValue: '',
         },
@@ -685,7 +685,7 @@ export default {
       checkbox: {
         name: 'tos',
         id: 'tos',
-        label: "Ho letto i Tos",
+        label: "Accetto i termini di servizio",
         initialValue:false
       }
     },

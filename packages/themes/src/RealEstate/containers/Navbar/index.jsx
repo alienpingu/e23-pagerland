@@ -91,7 +91,7 @@ const Navbar = ({
           <Container {...ContainerProps}>
             <Box flexBox alignItems="center">
               {Logo && (
-                <LogoWrapper {...LogoProps}>
+                <LogoWrapper {...LogoProps} to='welcome' data-to='welcome'>
                   <Logo stickyBool={isNavbarSticky}/>
                 </LogoWrapper>
               )}
