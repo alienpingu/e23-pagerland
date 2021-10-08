@@ -149,11 +149,6 @@ export default {
         'data-to': 'about',
         label: 'About',
       },
-      {
-        to: 'location',
-        'data-to': 'location',
-        label: 'Dotazioni',
-      },
       // {
       //   to: 'exterior',
       //   'data-to': 'exterior',
@@ -168,6 +163,11 @@ export default {
         to: 'surroundings',
         'data-to': 'surroundings',
         label: 'Attività',
+      },
+      {
+        to: 'location',
+        'data-to': 'location',
+        label: 'Dotazioni',
       },
       {
         to: 'gallery',
@@ -232,9 +232,9 @@ export default {
     }
   },
   about: {
-    title: "Lo spazio esclusivo, versatile, altamente personalizzato per aziende e professionisti.",
+    title: "La location esclusiva, versatile, altamente personalizzata per aziende e professionisti.",
     text:
-      'Un luminoso open space di 300 mq perfetto per eventi, riunioni, presentazioni, mostre, servizi fotografici, ma anche pranzi di lavoro, cocktail, press-day e cene aziendali. Una business suite ideale per vivere un’esperienza di lavoro unica in un ambiente riservato, dotato di spazi versatili, connessione e strumenti audio visivi, catering.',
+      textToMultiline`Un luminoso open space di 300 mq perfetto per eventi, riunioni, presentazioni, mostre, servizi fotografici, ma anche pranzi di lavoro, cocktail, press-day e cene aziendali.\n Una business suite ideale per vivere un’esperienza di lavoro unica in un ambiente riservato, dotato di spazi versatili, connessione e strumenti audio visivi, catering.`,
     gallery: [
       {
         source: aboutLarge1,
@@ -400,7 +400,7 @@ export default {
             srcSet: `${interior5} 1x, ${interior52x} 2x`,
           },
         ],
-        title: "Design e arte",
+        title: "Design e funzionalità",
         text: textToMultiline`Arredi design e ambienti luminosi caratterizzano un open space di 300 mq in stile contemporaneo, con spazi di lavoro trasformabili, secondo le diverse esigenze, in base al numero di partecipanti e alla tipologia di evento.\n\nAdatta come location per riprese video, può sembrare una casa, ma anche una galleria d'arte. L'interno ha un arredamento design che crea l'ambiente adatto a meeting formali ma anche eventi conviviali.`,
       },
       {
@@ -426,9 +426,36 @@ export default {
             srcSet: `${cooking5} 1x, ${cooking52x} 2x`,
           },
         ],
-        title: 'Meeting in cucina',
+        title: 'Comfort e privacy',
         text:
-          'Lo spazio trasformabile, adattabile alle diverse esigenze è dotato di audio diffusione e viedowall per creare meeting, presentazioni, conferenze. Una cucina a scomparsa e un ampio tavolo possono accompagnare gli eventi con pause caffè, aperitivi e cene.',
+          'Un ambiente moderno, riservato e confortevole, pensato per garantire un’esperienza di lavoro unica, facendoti sentire come fossi a casa tua. Ideale per i professionisti che cercano tranquillità e comfort per uno smartworking personalizzato, con moderne tecnologie.',
+      },
+      {
+        slides: [
+          {
+            src: cooking1,
+            srcSet: `${cooking1} 1x, ${cooking12x} 2x`,
+          },
+          {
+            src: cooking2,
+            srcSet: `${cooking2} 1x, ${cooking22x} 2x`,
+          },
+          {
+            src: cooking3,
+            srcSet: `${cooking3} 1x, ${cooking32x} 2x`,
+          },
+          {
+            src: cooking4,
+            srcSet: `${cooking4} 1x, ${cooking42x} 2x`,
+          },
+          {
+            src: cooking5,
+            srcSet: `${cooking5} 1x, ${cooking52x} 2x`,
+          },
+        ],
+        title: 'Ospitalità e home feeling',
+        text:
+          'Una cucina a scomparsa e un ampio tavolo possono accompagnare gli eventi con pause caffè, aperitivi e cene. A rendere l’esperienza unica, confortevole e distesa un’area fitness e anche un biliardo e un ping pong!',
       },
     ],
   },
@@ -590,7 +617,7 @@ export default {
     ],
   },
   contact: {
-    title: 'Contact',
+    title: 'Contatti',
     thumbnail: {
       src: contactImg,
       srcSet: `${contactImg} 1x, ${contactImg2x} 2x`,
@@ -642,7 +669,7 @@ export default {
     },
     form: {
       title: 'Mandaci un messaggio per esser contattato al più presto',
-      sendButtonText: 'Send',
+      sendButtonText: 'Invia',
       validationSchema: Yup.object({
         firstName: Yup.string().max(15, 'Inserisci massimo 15 caratteri').required('Campo obbligatorio'),
         email: Yup.string().email('Inserire una email valida').required('Campo obbligatorio'),
@@ -685,7 +712,7 @@ export default {
       checkbox: {
         name: 'tos',
         id: 'tos',
-        label: "Accetto i termini di servizio",
+        label: "Ho letto e accetto l'informativa sulla privacy",
         initialValue:false
       }
     },

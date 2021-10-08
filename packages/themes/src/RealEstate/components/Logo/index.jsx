@@ -6,7 +6,8 @@ import { colors } from '../../styles';
 
 const Svg = styled.svg`
   display: flex;
-  max-height: 48px;
+  max-height: 54px;
+  margin-left:-12px;
   ${base};
 `;
 

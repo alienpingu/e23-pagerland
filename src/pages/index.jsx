@@ -35,10 +35,10 @@ const RealEstate = ({ url }) => (
     <Navbar />
     <Welcome name="welcome" />
     <About name="about" />
-    <Location name="location" />
     <Exterior name="exterior" />
     <Interior name="interior" />
     <Surroundings name="surroundings" />
+    <Location name="location" />
     <Gallery name="gallery" />
     <Contact name="contact" />
     <SimilarProperties name="similar-properties" />

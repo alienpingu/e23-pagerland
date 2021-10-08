@@ -144,6 +144,8 @@ Welcome.defaultProps = {
     ...smoothLinkProps,
     mt: 4,
     variant: 'brand',
+    background: "#174A5B",
+    color: "#FFF",
     size: 'large',
   },
   GridProps: {
