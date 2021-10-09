@@ -46,6 +46,7 @@ export const NavIndicator = styled.div`
   left: 0;
   transition: ${transition.all};
   ${base};
+  background-color: #174a5b;
 `;
 
 export const ToggleButton = styled(HamburgerSpin)`

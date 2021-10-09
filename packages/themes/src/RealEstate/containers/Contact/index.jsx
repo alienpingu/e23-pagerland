@@ -249,6 +249,8 @@ Contact.defaultProps = {
     variant: 'brand',
     mt: 24,
     icon: ArrowRight,
+    background: "#174a5b",
+    color: "#FFF"
   },
   ...data.contact,
 };
