@@ -27,8 +27,8 @@
   font-weight: 500;
   white-space: nowrap;
   transition: all 0.2s ease-in-out 0s;
-  color: rgb(38, 37, 34);
-  background-color: rgb(124, 162, 174);
+  color: #fff;
+  background-color: #174a5b;
   padding: 20px 48px;
 }
 

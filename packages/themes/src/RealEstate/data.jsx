@@ -234,7 +234,7 @@ export default {
   about: {
     title: "La location esclusiva, versatile, altamente personalizzata per aziende e professionisti.",
     text:
-      textToMultiline`Un luminoso open space di 300 mq perfetto per eventi, riunioni, presentazioni, mostre, servizi fotografici, ma anche pranzi di lavoro, cocktail, press-day e cene aziendali.\n Una business suite ideale per vivere un’esperienza di lavoro unica in un ambiente riservato, dotato di spazi versatili, connessione e strumenti audio visivi, catering.`,
+      textToMultiline`Un luminoso open space di 300 mq perfetto per eventi, riunioni, presentazioni, mostre, servizi fotografici, ma anche pranzi di lavoro, cocktail, press-day e cene aziendali.\n\n Una business suite ideale per vivere un’esperienza di lavoro unica in un ambiente riservato, dotato di spazi versatili, connessione e strumenti audio visivi, catering.`,
     gallery: [
       {
         source: aboutLarge1,
@@ -406,6 +406,32 @@ export default {
       {
         slides: [
           {
+            src: interior1,
+            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+          },
+          {
+            src: interior2,
+            srcSet: `${interior2} 1x, ${interior22x} 2x`,
+          },
+          {
+            src: interior3,
+            srcSet: `${interior3} 1x, ${interior32x} 2x`,
+          },
+          {
+            src: interior4,
+            srcSet: `${interior4} 1x, ${interior42x} 2x`,
+          },
+          {
+            src: interior5,
+            srcSet: `${interior5} 1x, ${interior52x} 2x`,
+          },
+        ],
+        title: "Tecnologia e flessibilità",
+        text: textToMultiline`Lo spazio trasformabile, adattabile alle diverse esigenze è dotato di audio diffusione e videowall per creare meeting, presentazioni, conferenze.\nGli alti soffitti e le finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre.`,
+      },
+      {
+        slides: [
+          {
             src: cooking1,
             srcSet: `${cooking1} 1x, ${cooking12x} 2x`,
           },
@@ -461,21 +487,21 @@ export default {
   },
   surroundings: {
     sections: [
-      {
-        ImgProps: {
-          src: surrounding1,
-          srcSet: `${surrounding1} 1x, ${surrounding12x} 2x`,
-        },
-        title: 'Lo spazio',
-        text:
-          'Lo spazio ampio con alti soffitti e finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre. A rendere la esperienza unica, confortevole e distesa un area fitness e anche un biliardo e un ping pong!',
-       /* cta: {
-          as: 'a',
-          label: 'Learn more',
-          href:
-            'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
-        },*/
-      },
+      // {
+      //   ImgProps: {
+      //     src: surrounding1,
+      //     srcSet: `${surrounding1} 1x, ${surrounding12x} 2x`,
+      //   },
+      //   title: 'Lo spazio',
+      //   text:
+      //     'Lo spazio ampio con alti soffitti e finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre. A rendere la esperienza unica, confortevole e distesa un area fitness e anche un biliardo e un ping pong!',
+      //   cta: {
+      //     as: 'a',
+      //     label: 'Learn more',
+      //     href:
+      //       'https://themeforest.net/item/pagerland-react-and-gatsby-landing-page-templates/26548567',
+      //   },
+      // },
       {
         ImgProps: {
           src: surrounding2,
@@ -668,13 +694,13 @@ export default {
       ],
     },
     form: {
-      title: 'Mandaci un messaggio per esser contattato al più presto',
+      title: 'Manda un messaggio per esser contattato al più presto',
       sendButtonText: 'Invia',
       validationSchema: Yup.object({
         firstName: Yup.string().max(15, 'Inserisci massimo 15 caratteri').required('Campo obbligatorio'),
         email: Yup.string().email('Inserire una email valida').required('Campo obbligatorio'),
         message: Yup.string().min(20, 'Inserisci almeno 20 caratteri').required('Campo obbligatorio'),
-        tos: Yup.boolean().oneOf([true], 'This field must be checked')
+        tos: Yup.boolean().oneOf([true], 'Il campo deve esser contrassegnato').required('Campo obbligatorio')
       }),
       // eslint-disable-next-line no-undef
       onSubmit: values => window.alert(`Form sent with values ${JSON.stringify(values)}`),
@@ -703,7 +729,7 @@ export default {
         },
         {
           name: 'message',
-          label: 'Message',
+          label: 'Messaggio',
           placeholder: 'Scrivi qualcosa...',
           multiline: true,
           initialValue: '',

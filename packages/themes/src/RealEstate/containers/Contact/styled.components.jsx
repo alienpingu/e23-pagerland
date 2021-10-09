@@ -14,7 +14,7 @@ export const ImgWrapper = styled.div`
     z-index: -1;
     display: block;
     content: '';
-    background-color: ${colors.brand};
+    background-color: ${colors.real};
   }
 
   &::after {

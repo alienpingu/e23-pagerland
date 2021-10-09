@@ -62,11 +62,11 @@ Surroundings.defaultProps = {
     gridTemplateColumns: {
       _: '1fr',
       md: 'repeat(2, 1fr)',
-      lg: 'repeat(3, 1fr)',
+      lg: 'repeat(2, 1fr)',
     },
     gridTemplateRows: {
       _: 'auto',
-      lg: 'repeat(2, 1fr)',
+      lg: 'repeat(2, 500px)',
     },
     gridAutoFlow: {
       _: 'row',

@@ -37,14 +37,14 @@ const Location = ({
   GoogleMapsProps,
 }) => (
   <Box name={name} {...WrapperProps}>
-    <Container {...ContainerProps}>
+    {/*<Container {...ContainerProps}>
       <Box {...CaptionProps}>
         <Fade bottom cascade duration={600}>
           <Typography {...TitleProps}>{title}</Typography>
           <Typography {...TextProps}>{text}</Typography>
         </Fade>
       </Box>
-    </Container>
+    </Container>*/}
     <Box {...CountersWrapperProps}>
         <Typography {...CountersTitleProps} >{CountersTitle}</Typography>
       <Container>
@@ -110,7 +110,7 @@ Location.propTypes = {
 Location.defaultProps = {
   WrapperProps: {
     overflow: 'hidden',
-    pt: 80,
+    pt: 0,
     pb: 0,
   },
   CaptionProps: {

@@ -59,7 +59,7 @@ export default {
               `};
           display: block;
           content: '';
-          background-color: ${colors.brand};
+          background-color: ${colors.real};
         }
 
         &::after {

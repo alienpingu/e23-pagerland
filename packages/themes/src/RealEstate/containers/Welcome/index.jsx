@@ -57,7 +57,7 @@ const Welcome = ({
             </Grid>*/}
             <Button id="btn-welcome-desktop" {...CtaProps} {...cta} />
 
-            <a id="btn-welcome-mobile" variant="brand" className="sc-jSFkmK frPUkr" href="tel:9138471984"><span>Chiamaci</span></a>
+            <a id="btn-welcome-mobile"  href="tel:9138471984" {...CtaProps}><span>Chiamaci</span></a>
 
           </Fade>
         </Box>
