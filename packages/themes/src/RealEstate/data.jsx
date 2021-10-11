@@ -738,7 +738,7 @@ export default {
       checkbox: {
         name: 'tos',
         id: 'tos',
-        label: "Ho letto e accetto l'informativa sulla privacy",
+        // label: "Ho letto e accetto l'informativa sulla privacy",
         initialValue:false
       }
     },

@@ -26,13 +26,13 @@ const Surroundings = ({
     <StyledGrid {...GridProps}>
       {sections.map((section, key) => (
         <React.Fragment key={key}>
-          <StyledImg {...ImgProps} {...section.ImgProps} />
           <Box {...CaptionProps}>
             <Fade cascade bottom duration={600}>
               <Typography {...TitleProps}>{section.title}</Typography>
               <Typography {...TextProps}>{section.text}</Typography>
             </Fade>
           </Box>
+          <StyledImg {...ImgProps} {...section.ImgProps} />
         </React.Fragment>
       ))}
     </StyledGrid>

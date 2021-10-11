@@ -13,6 +13,9 @@ import Icon from '@pagerland/common/src/components/Icon';
 import Button from '@pagerland/common/src/components/Button';
 import ArrowRight from '@pagerland/icons/src/line/ArrowRight';
 
+
+
+
 import Input from '@pagerland/common/src/components/Formik/Input';
 import Checkbox from '@pagerland/common/src/components/Checkbox';
 import data from '../../data';
@@ -97,7 +100,7 @@ const Contact = ({
                       <Input key={field.name} {...field} />
                     ))}
                     
-                    <Checkbox {...form.checkbox} value={checked} onToggle={() => setChecked(!checked)}/>
+                    <Checkbox {...form.checkbox} value={checked} label={<label htmlFor="tos">Ho letto e accetto <a href="/privacy">l'informativa sulla privacy</a></label>} onToggle={() => setChecked(!checked)} required/>
                     
                     <Button type="submit" {...FormButtonProps}>
                       {form.sendButtonText}
