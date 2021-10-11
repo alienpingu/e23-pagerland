@@ -523,7 +523,7 @@ export default {
         },
         title: 'Su richiesta',
         text:
-          textToMultiline`Catering e mise en place\nHostess, reception, sicurezza\nPersonalizzazione e allestimento\nService audio-video`,
+          textToMultiline`-Catering\n-Mise en place\n-Hostess\n-Reception\n-Sicurezza\n-Personalizzazione\n-Allestimento\nService audio-video`,
         /*cta: {
           as: 'a',
           label: 'Learn more',
