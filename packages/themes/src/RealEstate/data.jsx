@@ -72,6 +72,28 @@ import cooking42x from './assets/interiors/cooking-4@2x.jpg';
 import cooking5 from './assets/interiors/cooking-5.jpg';
 import cooking52x from './assets/interiors/cooking-5@2x.jpg';
 
+import tech1 from './assets/interiors/tech-1.jpg';
+import tech12x from './assets/interiors/tech-1@2x.jpg';
+import tech2 from './assets/interiors/tech-2.jpg';
+import tech22x from './assets/interiors/tech-2@2x.jpg';
+import tech3 from './assets/interiors/tech-3.jpg';
+import tech32x from './assets/interiors/tech-3@2x.jpg';
+import tech4 from './assets/interiors/tech-4.jpg';
+import tech42x from './assets/interiors/tech-4@2x.jpg';
+import tech5 from './assets/interiors/tech-5.jpg';
+import tech52x from './assets/interiors/tech-5@2x.jpg';
+
+import conf1 from './assets/interiors/conf-1.jpg';
+import conf12x from './assets/interiors/conf-1@2x.jpg';
+import conf2 from './assets/interiors/conf-2.jpg';
+import conf22x from './assets/interiors/conf-2@2x.jpg';
+import conf3 from './assets/interiors/conf-3.jpg';
+import conf32x from './assets/interiors/conf-3@2x.jpg';
+import conf4 from './assets/interiors/conf-4.jpg';
+import conf42x from './assets/interiors/conf-4@2x.jpg';
+import conf5 from './assets/interiors/conf-5.jpg';
+import conf52x from './assets/interiors/conf-5@2x.jpg';
+
 import surrounding1 from './assets/surroundings/surroundings-1.jpg';
 import surrounding12x from './assets/surroundings/surroundings-1@2x.jpg';
 import surrounding2 from './assets/surroundings/surroundings-2.jpg';
@@ -406,24 +428,24 @@ export default {
       {
         slides: [
           {
-            src: interior1,
-            srcSet: `${interior1} 1x, ${interior12x} 2x`,
+            src: tech1,
+            srcSet: `${tech1} 1x, ${tech12x} 2x`,
           },
           {
-            src: interior2,
-            srcSet: `${interior2} 1x, ${interior22x} 2x`,
+            src: tech2,
+            srcSet: `${tech2} 1x, ${tech22x} 2x`,
           },
           {
-            src: interior3,
-            srcSet: `${interior3} 1x, ${interior32x} 2x`,
+            src: tech3,
+            srcSet: `${tech3} 1x, ${tech32x} 2x`,
           },
           {
-            src: interior4,
-            srcSet: `${interior4} 1x, ${interior42x} 2x`,
+            src: tech4,
+            srcSet: `${tech4} 1x, ${tech42x} 2x`,
           },
           {
-            src: interior5,
-            srcSet: `${interior5} 1x, ${interior52x} 2x`,
+            src: tech5,
+            srcSet: `${tech5} 1x, ${tech52x} 2x`,
           },
         ],
         title: "Tecnologia e flessibilità",
@@ -432,24 +454,24 @@ export default {
       {
         slides: [
           {
-            src: cooking1,
-            srcSet: `${cooking1} 1x, ${cooking12x} 2x`,
+            src: conf1,
+            srcSet: `${conf1} 1x, ${conf12x} 2x`,
           },
           {
-            src: cooking2,
-            srcSet: `${cooking2} 1x, ${cooking22x} 2x`,
+            src: conf2,
+            srcSet: `${conf2} 1x, ${conf22x} 2x`,
           },
           {
-            src: cooking3,
-            srcSet: `${cooking3} 1x, ${cooking32x} 2x`,
+            src: conf3,
+            srcSet: `${conf3} 1x, ${conf32x} 2x`,
           },
           {
-            src: cooking4,
-            srcSet: `${cooking4} 1x, ${cooking42x} 2x`,
+            src: conf4,
+            srcSet: `${conf4} 1x, ${conf42x} 2x`,
           },
           {
-            src: cooking5,
-            srcSet: `${cooking5} 1x, ${cooking52x} 2x`,
+            src: conf5,
+            srcSet: `${conf5} 1x, ${conf52x} 2x`,
           },
         ],
         title: 'Comfort e privacy',
