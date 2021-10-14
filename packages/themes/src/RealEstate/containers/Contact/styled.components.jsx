@@ -33,3 +33,8 @@ export const ImgWrapper = styled.div`
     display: block;
   }
 `;
+
+export const CtaWrapper = styled.a`
+  text-decoration: none;
+  color: #262522;
+`;

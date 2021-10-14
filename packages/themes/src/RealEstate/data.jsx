@@ -249,7 +249,7 @@ export default {
       children: 'Contattaci',
     },
     cta_mobile: {
-      href:'tel:+3965465489',
+      href:'tel:+393477631778',
       children: 'Chiamaci'
     }
   },
@@ -481,16 +481,16 @@ export default {
       {
         slides: [
           {
-            src: cooking1,
-            srcSet: `${cooking1} 1x, ${cooking12x} 2x`,
-          },
-          {
             src: cooking2,
             srcSet: `${cooking2} 1x, ${cooking22x} 2x`,
           },
           {
             src: cooking3,
             srcSet: `${cooking3} 1x, ${cooking32x} 2x`,
+          },
+          {
+            src: cooking1,
+            srcSet: `${cooking1} 1x, ${cooking12x} 2x`,
           },
           {
             src: cooking4,
@@ -545,7 +545,7 @@ export default {
         },
         title: 'Su richiesta',
         text:
-          textToMultiline`-Catering\n-Mise en place\n-Hostess\n-Reception\n-Sicurezza\n-Personalizzazione\n-Allestimento\nService audio-video`,
+          textToMultiline`- Catering\n- Mise en place\n- Hostess\n- Reception\n- Sicurezza\n- Personalizzazione\n- Allestimento\n- Service audio-video`,
         /*cta: {
           as: 'a',
           label: 'Learn more',
@@ -682,14 +682,18 @@ export default {
         {
           icon: MapMarker,
           text: textToMultiline`Via Averardo Buschi 1\n 20131 Milano (MI)`,
+          href: 'https://goo.gl/maps/TeFGqksWJP5NdXhX7'
         },
         {
           icon: Phone,
           text: '+39 347 763 1778',
+          href: 'tel:+393477631778'
         },
         {
           icon: Envelope,
           text: 'info@e23-milano.com',
+          href: 'mailto:info@e23-milano.com'
+
         },
       ],
       socialLinks: [

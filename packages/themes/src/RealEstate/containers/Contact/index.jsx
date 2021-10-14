@@ -20,7 +20,7 @@ import Input from '@pagerland/common/src/components/Formik/Input';
 import Checkbox from '@pagerland/common/src/components/Checkbox';
 import data from '../../data';
 
-import { ImgWrapper } from './styled.components';
+import { ImgWrapper, CtaWrapper } from './styled.components';
 
 
 
@@ -64,10 +64,10 @@ const Contact = ({
               <Typography {...DetailsTitleProps}>{details.title}</Typography>
               <Typography {...DetailsTextProps}>{details.text}</Typography>
               {details.info.map((item, key) => (
-                <Box key={key} {...DetailsInfoItemProps}>
+                <CtaWrapper key={key} {...DetailsInfoItemProps} href={item.href}>
                   <Icon icon={item.icon} {...DetailsIconProps} />
                   {item.text}
-                </Box>
+                </CtaWrapper>
               ))}
             </Fade>
   {/*          <Box {...SocialLinksProps}>
@@ -206,11 +206,16 @@ Contact.defaultProps = {
   DetailsTextProps: {
     color: 'gray.1',
     mb: 4,
+    textDecoration: 'none',
+    
   },
   DetailsInfoItemProps: {
     flexBox: true,
     alignItems: 'flex-start',
     mb: 3,
+    as: 'a',
+    color:'gray.1',
+    textDecoration: 'none',
   },
   DetailsIconProps: {
     fontSize: 24,
