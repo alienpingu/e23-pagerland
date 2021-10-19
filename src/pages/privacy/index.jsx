@@ -12,7 +12,6 @@ import {
 
 import preview from '@pagerland/themes/src/RealEstate/assets/preview.jpg';
 
-import { StyledContainer } from './styled.components';
 
 
 import SEO from '../../components/SEO';
@@ -28,7 +27,7 @@ const RealEstate = ({ url }) => (
     <SEO title="privacy" />
 
 
-    <StyledContainer>
+    <div id="privacy">
       <a href="/">Torna alla home</a>
       <h2>Privacy Policy</h2>
       <p>Con questa pagina si intendono informare gli utenti del presente sito circa le modalità di gestione dello stesso con riguardo al trattamento dei loro dati personali, così come prescritto dall’art. 13 e 14 del Regolamento europeo 2016/679 – General Data Protection Regulation. La presente informativa rispetta e si conforma pienamente anche alla Raccomandazione n. 2/2001 che le autorità europee per la protezione dei dati personali, riunite nel Gruppo istituito dall’art. 29 della direttiva n. 95/46/CE, hanno adottato il 17 maggio 2001 per individuare alcuni requisiti minimi per la raccolta di dati personali online e, in particolare, le modalità, i tempi e la natura delle informazioni che i titolari del trattamento devono fornire agli utenti quando questi si collegano a pagine web, indipendentemente dagli scopi del collegamento. Con la consultazione di questo sito possono essere trattati dati relativi a persone identificate o identificabili.</p>
@@ -46,7 +45,7 @@ const RealEstate = ({ url }) => (
       <p>L’invio facoltativo, esplicito e volontario di posta elettronica agli indirizzi indicati su questo sito comporta la successiva acquisizione dell’indirizzo del mittente, necessario per rispondere alle richieste, nonché degli eventuali altri dati personali inseriti nella missiva, così come per i dati raccolti attraverso le form di raccolta dati dedicate ai Servizi online.</p>
       <p>I dati personali sono trattati con strumenti automatizzati per il tempo strettamente necessario a conseguire gli scopi per cui sono stati raccolti.</p>
       <p>Specifiche misure di sicurezza sono osservate per prevenire la perdita dei dati, usi illeciti o non corretti ed accessi non autorizzati.</p>
-    </StyledContainer>
+    </div>
 
     <Footer name="about-us" />
   </Theme>
