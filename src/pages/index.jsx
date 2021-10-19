@@ -26,6 +26,7 @@ import SEO from '../components/SEO';
 const RealEstate = ({ url }) => (
   <Theme>
     <Head>
+      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="035642ee-e211-4555-872f-41ba917a5aa2" data-blockingmode="auto" type="text/javascript"></script>
       <link href={theme.typography.googleFont} rel="stylesheet" />
       <meta name="theme-color" content={theme.colors.primary} />
       <meta property="og:image" content={`${url}${preview}`} />

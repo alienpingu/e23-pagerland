@@ -169,7 +169,7 @@ export default {
       {
         to: 'about',
         'data-to': 'about',
-        label: 'About',
+        label: 'E 23',
       },
       // {
       //   to: 'exterior',
@@ -449,7 +449,7 @@ export default {
           },
         ],
         title: "Tecnologia e flessibilità",
-        text: textToMultiline`Lo spazio trasformabile, adattabile alle diverse esigenze è dotato di audio diffusione e videowall per creare meeting, presentazioni, conferenze.\nGli alti soffitti e le finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre.`,
+        text: textToMultiline`Lo spazio trasformabile e adattabile alle diverse esigenze è dotato di audio diffusione e videowall per creare meeting, presentazioni, conferenze.\nGli alti soffitti e le finestre piene di luce naturale rendono la location ideale per scattare servizi fotografici e allestire mostre.`,
       },
       {
         slides: [
@@ -503,7 +503,7 @@ export default {
         ],
         title: 'Ospitalità e home feeling',
         text:
-          'Una cucina a scomparsa e un ampio tavolo possono accompagnare gli eventi con pause caffè, aperitivi e cene. A rendere l’esperienza unica, confortevole e distesa un’area fitness e anche un biliardo e un ping pong!',
+          'Una cucina a scomparsa e un ampio tavolo possono accompagnare gli eventi con pause caffè, aperitivi e cene. A rendere l’esperienza unica, confortevole e distesa un’area fitness e anche un biliardo o ping pong!',
       },
     ],
   },

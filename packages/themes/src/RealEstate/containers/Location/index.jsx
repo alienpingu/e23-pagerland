@@ -140,14 +140,14 @@ Location.defaultProps = {
       md: 48,
       lg: 48,
     },
-    bg: 'gray.0',
+    bg: 'real',
   },
   CountersTitleProps: {
    accent: 'after',
     as: 'h2',
     variant: 'h2',
     mb: 48,
-    color: 'brand',
+    color: 'gray.6',
     textAlign: 'center'
   },
   CountersGridProps: {
@@ -176,14 +176,13 @@ Location.defaultProps = {
   },
   CounterIconProps: {
     fontSize: 48,
-    color: 'brand',
+    color: 'gray.6',
     mr: {
       _: 0,
-      lg: 3,
+      lg: 0,
     },
     mb: {
       _: 3,
-      lg: 0,
     },
   },
   CounterValueProps: {
