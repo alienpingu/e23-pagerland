@@ -127,7 +127,6 @@ Location.defaultProps = {
     variant: 'body1',
     mb: 110,
     mt: 50,
-    color: 'gray.1',
   },
   CountersWrapperProps: {
     py: {
@@ -176,7 +175,7 @@ Location.defaultProps = {
   },
   CounterIconProps: {
     fontSize: 48,
-    color: 'gray.6',
+    color: 'gray.3',
     mr: {
       _: 0,
       lg: 0,
@@ -187,13 +186,14 @@ Location.defaultProps = {
   },
   CounterValueProps: {
     variant: 'h3',
-    color: 'gray.6',
+    color: 'gray.2',
   },
   CounterTitleProps: {
-    color: 'white',
     variant: 'h3',
     mt: 12,
-    textAlign:'center'
+    textAlign:'center',
+    color: 'gray.2',
+
   },
   GoogleMapsProps: {
     mapContainerStyle: {
