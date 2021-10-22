@@ -455,23 +455,23 @@ export default {
         slides: [
           {
             src: conf1,
-            srcSet: `${conf1} 1x, ${conf12x} 2x`,
-          },
-          {
-            src: conf2,
             srcSet: `${conf2} 1x, ${conf22x} 2x`,
           },
           {
-            src: conf3,
+            src: conf2,
             srcSet: `${conf3} 1x, ${conf32x} 2x`,
           },
           {
-            src: conf4,
+            src: conf3,
             srcSet: `${conf4} 1x, ${conf42x} 2x`,
           },
           {
-            src: conf5,
+            src: conf4,
             srcSet: `${conf5} 1x, ${conf52x} 2x`,
+          },
+          {
+            src: conf5,
+            srcSet: `${conf1} 1x, ${conf12x} 2x`,
           },
         ],
         title: 'Comfort e privacy',

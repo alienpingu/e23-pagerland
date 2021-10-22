@@ -100,7 +100,7 @@ const Contact = ({
                       <Input key={field.name} {...field} />
                     ))}
                     
-                    <Checkbox {...form.checkbox} value={checked} label={<label htmlFor="tos">Ho letto e accetto <a href="/privacy">l'informativa sulla privacy</a></label>} onToggle={() => setChecked(!checked)} required/>
+                    <Checkbox {...form.checkbox} value={checked} label={<label htmlFor="tos">Ho letto e accetto <a href="/privacy" target="_black">l'informativa sulla privacy</a></label>} onToggle={() => setChecked(!checked)} required/>
                     
                     <Button type="submit" {...FormButtonProps}>
                       {form.sendButtonText}
