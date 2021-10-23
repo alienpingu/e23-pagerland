@@ -112,6 +112,14 @@ Location.defaultProps = {
     overflow: 'hidden',
     pt: 0,
     pb: 0,
+    my: {
+      _:64
+    },
+    mx: {
+      _:48,
+      md: 64
+    }
+
   },
   CaptionProps: {
     maxWidth: 736,

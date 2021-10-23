@@ -70,7 +70,7 @@ const Footer = ({
       <Box {...CopyrightWrapperProps}>
         <Typography {...CopyrightTextProps}>{copyright}</Typography>
         <Typography as="a" href="/privacy" target="_blank"{...CopyrightTextProps}>Privacy policy - Cookie policy</Typography>
-        {/*<Box {...SocialLinksProps}>
+        <Box {...SocialLinksProps}>
           {socialLinks?.map((socialLink, key) => (
             <Fade left duration={600} key={socialLink.title} distance="10px" delay={100 * key}>
               <Button as="a" href={socialLink.href} title={socialLink.title} {...SocialLinkProps}>
@@ -78,7 +78,7 @@ const Footer = ({
               </Button>
             </Fade>
           ))}
-        </Box>*/}
+        </Box>
       </Box>
     </Container>
   </Box>

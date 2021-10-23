@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import { Form, Formik } from 'formik';
-
+import { Form, Formik, Field, ErrorMessage  } from 'formik';
+ import * as Yup from 'yup';
 import Fade from 'react-reveal/Fade';
 
 import Box from '@pagerland/common/src/components/Box';
@@ -13,14 +13,16 @@ import Icon from '@pagerland/common/src/components/Icon';
 import Button from '@pagerland/common/src/components/Button';
 import ArrowRight from '@pagerland/icons/src/line/ArrowRight';
 
-
+import User from '@pagerland/icons/src/line/User';
+import Phone from '@pagerland/icons/src/line/Phone';
+import Envelope from '@pagerland/icons/src/line/Envelope';
 
 
 import Input from '@pagerland/common/src/components/Formik/Input';
 import Checkbox from '@pagerland/common/src/components/Checkbox';
 import data from '../../data';
 
-import { ImgWrapper, CtaWrapper } from './styled.components';
+import { ImgWrapper, CtaWrapper, CheckBoxWrapper } from './styled.components';
 
 
 
@@ -46,7 +48,6 @@ const Contact = ({
   FormTitleProps,
   FormButtonProps,
 }) => {
-  let [checked, setChecked] = useState(false) 
   return(
     <Box name={name} {...WrapperProps}>
       <Container {...ContainerProps}>
@@ -60,54 +61,117 @@ const Contact = ({
             </ImgWrapper>
           </Fade>
           <Box {...DetailsProps}>
-            <Fade bottom cascade duration={600}>
               <Typography {...DetailsTitleProps}>{details.title}</Typography>
               <Typography {...DetailsTextProps}>{details.text}</Typography>
               {details.info.map((item, key) => (
-                <CtaWrapper key={key} {...DetailsInfoItemProps} href={item.href}>
+                <CtaWrapper key={key} href={item.href}>
                   <Icon icon={item.icon} {...DetailsIconProps} />
                   {item.text}
                 </CtaWrapper>
               ))}
-            </Fade>
-  {/*          <Box {...SocialLinksProps}>
-              {details.socialLinks?.map((socialLink, key) => (
-                <Fade left duration={600} key={socialLink.title} distance="10px" delay={100 * key}>
-                  <Button as="a" href={socialLink.href} title={socialLink.title} {...SocialLinkProps}>
-                    <Icon icon={socialLink.icon} />
-                  </Button>
-                </Fade>
-              ))}
-            </Box>*/}
           </Box>
           <Box {...FormProps}>
             <Formik
-              validationSchema={form.validationSchema}
-              onSubmit={form.onSubmit}
-              initialValues={form.fields.reduce(
-                (acc, field) => ({
-                  ...acc,
-                  [field.name]: field.initialValue,
-                }),
-                {},
-              )}
+              validationSchema={Yup.object({
+                   firstName: Yup.string().min(5, 'Inserire almeno 5 caratteri').required('Campo obbligatorio'),
+                   phone: Yup.string().required('Campo obbligatorio').matches(/^[0-9]+$/, "Inserire solo cifre")
+                            .min(10, 'Inserire esattamente 10 cifre')
+                            .max(10, 'Inserire esattamente 10 cifre'),
+                   email: Yup.string().email('Invalid email address').required('Campo obbligatorio'),
+                   message: Yup.string().min(20, 'Scrivere minimo 20 caratteri').required('Campo obbligatorio'),
+                   tos: Yup.bool().oneOf([true], 'Obbligatorio accettare le condizioni'),
+
+                 })}
+              onSubmit={(data) => 
+                fetch('https://formspree.io/f/mwkaywpk', {
+                      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                      mode: 'cors', // no-cors, *cors, same-origin
+                      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                      credentials: 'same-origin', // include, *same-origin, omit
+                      headers: {
+                        'Content-Type': 'application/json'
+                        // 'Content-Type': 'application/x-www-form-urlencoded',
+                      },
+                      redirect: 'follow', // manual, *follow, error
+                      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                      body: JSON.stringify(data) // body data type must match "Content-Type" header
+                    }).then(response => console.log(response)) // parses JSON response into native JavaScript objects
+              }
+              initialValues={{ 
+                firstName: '', 
+                phone: '',
+                email: '',
+                message: '',
+                tos: false
+                }}
             >
-              <Form>
-                <Fade cascade bottom duration={600}>
+              {({values,
+                 handleChange,
+                 handleSubmit,
+                 handleBlur,
+                 errors,
+                 status,
+                 touched
+              }) => <Form>
                   <Typography {...FormTitleProps}>{form.title}</Typography>
-                  <div>
-                    {form.fields.map(field => (
-                      <Input key={field.name} {...field} />
-                    ))}
-                    
-                    <Checkbox {...form.checkbox} value={checked} label={<label htmlFor="tos">Ho letto e accetto <a href="/privacy" target="_black">l'informativa sulla privacy</a></label>} onToggle={() => setChecked(!checked)} required/>
-                    
+                      <Input 
+                        name="firstName" 
+                        label="Nome e Cognome" 
+                        placeholder="es. Mario Rossi" 
+                        value={values.firstName}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        prefix={<Icon icon={User} />}
+                      />
+                      <Input 
+                        name="phone" 
+                        label="Telefono" 
+                        placeholder="es. 39 356 898 7854" 
+                        max="10"
+                        value={values.phone}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        prefix={<Icon icon={Phone} />}
+                      />
+
+                      <Input 
+                        name="email" 
+                        label="E-mail" 
+                        placeholder="es. esempio@telegmail.com" 
+                        value={values.email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        prefix={<Icon icon={Envelope} />} 
+                      />
+                      <Input 
+                        name="message" 
+                        label="Messaggio" 
+                        placeholder="Scrivi qualcosa..." 
+                        value={values.text}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                      />
+                      <CheckBoxWrapper>
+                        <Field 
+                          type="checkbox" 
+                          name="tos"
+                          onChange={handleChange}
+                          onBlur={handleBlur}
+                          checked={values.tos}
+                          className={(errors.acceptTerms && touched.acceptTerms ? ' is-invalid' : '')}
+                        />
+                        <label htmlFor="tos">
+                           Ho letto e accetto <a href="/privacy" target="_black">l'informativa sulla privacy</a>
+                        </label>
+                        <ErrorMessage name="tos" component="div" className="invalid-feedback" />
+                      </CheckBoxWrapper>
                     <Button type="submit" {...FormButtonProps}>
-                      {form.sendButtonText}
+                      Invia
                     </Button>
-                  </div>
-                </Fade>
-              </Form>
+                    {/*<Button type="reset" >
+                      Pulisci
+                    </Button>*/}
+              </Form>}
             </Formik>
           </Box>
         </Grid>
@@ -212,10 +276,10 @@ Contact.defaultProps = {
   DetailsInfoItemProps: {
     flexBox: true,
     alignItems: 'flex-start',
-    mb: 3,
     as: 'a',
     color:'gray.1',
     textDecoration: 'none',
+    pb: 48
   },
   DetailsIconProps: {
     fontSize: 24,

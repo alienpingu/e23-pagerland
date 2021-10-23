@@ -720,16 +720,15 @@ export default {
       ],
     },
     form: {
-      title: 'Manda un messaggio per esser contattato al più presto',
+      title: 'Manda un messaggio per essere contattato al più presto',
       sendButtonText: 'Invia',
       validationSchema: Yup.object({
         firstName: Yup.string().max(15, 'Inserisci massimo 15 caratteri').required('Campo obbligatorio'),
         email: Yup.string().email('Inserire una email valida').required('Campo obbligatorio'),
         message: Yup.string().min(20, 'Inserisci almeno 20 caratteri').required('Campo obbligatorio'),
-        tos: Yup.boolean().oneOf([true], 'Il campo deve esser contrassegnato').required('Campo obbligatorio')
       }),
       // eslint-disable-next-line no-undef
-      onSubmit: values => window.alert(`Form sent with values ${JSON.stringify(values)}`),
+      onSubmit: values => console.log(JSON.stringify(values)),
       fields: [
         {
           name: 'firstName',
@@ -937,29 +936,9 @@ export default {
     ],
     socialLinks: [
       {
-        icon: FacebookF,
-        href: 'https://mypags.app',
-        title: 'Facebook',
-      },
-      {
-        icon: Twitter,
-        href: 'https://mypags.app',
-        title: 'Twitter',
-      },
-      {
         icon: Instagram,
-        href: 'https://mypags.app',
+        href: 'https://www.instagram.com/e23srl/',
         title: 'Instagram',
-      },
-      {
-        icon: Youtube,
-        href: 'https://mypags.app',
-        title: 'YouTube',
-      },
-      {
-        icon: Linkedin,
-        href: 'https://mypags.app',
-        title: 'Linkedin',
       },
     ],
   },

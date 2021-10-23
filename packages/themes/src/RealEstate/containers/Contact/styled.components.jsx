@@ -24,7 +24,7 @@ export const ImgWrapper = styled.div`
     z-index: -1;
     display: block;
     width: 128px;
-    height: 128px;
+    height: 128px ;
     content: '';
     background-color: ${colors.gray[0]};
   }
@@ -36,5 +36,18 @@ export const ImgWrapper = styled.div`
 
 export const CtaWrapper = styled.a`
   text-decoration: none;
+  display:block;
   color: #262522;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+`;
+
+export const CheckBoxWrapper = styled.div`
+  .is-invalid {
+    color: red;
+  }
+  .invalid-feedback {
+    color: red;
+    font-size: 14px;
+  }
 `;
