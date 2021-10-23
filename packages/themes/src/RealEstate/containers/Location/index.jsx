@@ -113,10 +113,11 @@ Location.defaultProps = {
     pt: 0,
     pb: 0,
     my: {
-      _:64
+      _:0,
+      md: 64
     },
     mx: {
-      _:48,
+      _:0,
       md: 64
     }
 

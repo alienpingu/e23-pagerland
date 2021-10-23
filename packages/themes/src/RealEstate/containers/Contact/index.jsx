@@ -48,6 +48,8 @@ const Contact = ({
   FormTitleProps,
   FormButtonProps,
 }) => {
+
+
   return(
     <Box name={name} {...WrapperProps}>
       <Container {...ContainerProps}>
@@ -82,7 +84,7 @@ const Contact = ({
                    tos: Yup.bool().oneOf([true], 'Obbligatorio accettare le condizioni'),
 
                  })}
-              onSubmit={(data) => 
+              onSubmit={(data, {resetForm, setStatus}) => 
                 fetch('https://formspree.io/f/mwkaywpk', {
                       method: 'POST', // *GET, POST, PUT, DELETE, etc.
                       mode: 'cors', // no-cors, *cors, same-origin
@@ -95,7 +97,14 @@ const Contact = ({
                       redirect: 'follow', // manual, *follow, error
                       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
                       body: JSON.stringify(data) // body data type must match "Content-Type" header
-                    }).then(response => console.log(response)) // parses JSON response into native JavaScript objects
+                    }).then(response => {
+                      console.log(response)
+                      resetForm()
+                      setStatus({success: true})
+                    }).catch(error => {
+                      setStatus({success: false})
+
+                    })              
               }
               initialValues={{ 
                 firstName: '', 
@@ -112,7 +121,9 @@ const Contact = ({
                  errors,
                  status,
                  touched
-              }) => <Form>
+              }) => <Form
+                      success={!!status && !!status.success}
+                    >
                   <Typography {...FormTitleProps}>{form.title}</Typography>
                       <Input 
                         name="firstName" 
@@ -165,6 +176,8 @@ const Contact = ({
                         </label>
                         <ErrorMessage name="tos" component="div" className="invalid-feedback" />
                       </CheckBoxWrapper>
+                    {(!!status && !!status.success) ? <Typography variant="h4" color="success">Form inviato con successo</Typography> : ''}
+
                     <Button type="submit" {...FormButtonProps}>
                       Invia
                     </Button>
