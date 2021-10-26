@@ -69,11 +69,14 @@ const Footer = ({
       </Grid>*/}
       <Box {...CopyrightWrapperProps}>
         <Typography {...CopyrightTextProps}>{copyright}</Typography>
-        <Typography as="a" href="/privacy" target="_blank"{...CopyrightTextProps}>Privacy policy - Cookie policy</Typography>
+        <div>
+          <Typography as="a" href="/privacy" target="_blank"{...CopyrightTextProps}>Privacy policy</Typography>
+          <Typography as="a" href="/cookie" target="_blank"{...CopyrightTextProps}> - Cookie policy</Typography>
+        </div>
         <Box {...SocialLinksProps}>
           {socialLinks?.map((socialLink, key) => (
             <Fade left duration={600} key={socialLink.title} distance="10px" delay={100 * key}>
-              <Button as="a" href={socialLink.href} title={socialLink.title} {...SocialLinkProps}>
+              <Button as="a" href={socialLink.href} target={socialLink.target} title={socialLink.title} {...SocialLinkProps}>
                 <Icon icon={socialLink.icon} />
               </Button>
             </Fade>

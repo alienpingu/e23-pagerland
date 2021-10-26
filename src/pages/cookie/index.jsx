@@ -26,9 +26,9 @@ const RealEstate = ({ url }) => (
       <meta property="og:image" content={`${url}${preview}`} />
       <script id="CookieDeclaration" src="https://consent.cookiebot.com/035642ee-e211-4555-872f-41ba917a5aa2/cd.js" type="text/javascript" async></script>
     </Head>
-    <SEO title="privacy" />
+    <SEO title="cookie" />
 
-    <Privacy />
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/035642ee-e211-4555-872f-41ba917a5aa2/cd.js" type="text/javascript" async></script>
 
     <Footer name="about-us" />
   </Theme>

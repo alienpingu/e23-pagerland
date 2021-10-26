@@ -939,6 +939,7 @@ export default {
         icon: Instagram,
         href: 'https://www.instagram.com/e23srl/',
         title: 'Instagram',
+        target: '_blank'
       },
     ],
   },
