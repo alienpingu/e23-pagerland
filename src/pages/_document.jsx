@@ -2,7 +2,7 @@ import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
 
 import { ServerStyleSheet } from 'styled-components';
-
+import { CookiesProvider } from 'react-cookie';
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
@@ -31,11 +31,12 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <div id="portal" />
-          <NextScript />
-
+          <CookiesProvider>
+            <NextScript />
+          </CookiesProvider>
           <script
             async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_TRACKING_ID}`}
+            src={`https://www.googletagmanager.com/gtag/js?id=GTM-MQ7T65H`}
           />
           <script
             dangerouslySetInnerHTML={{
@@ -43,7 +44,7 @@ export default class MyDocument extends Document {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', '${process.env.GOOGLE_ANALYTICS_TRACKING_ID}');`,
+            gtag('config', 'GTM-MQ7T65H');`,
             }}
           />
         </body>

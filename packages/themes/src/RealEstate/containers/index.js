@@ -9,3 +9,4 @@ export { default as Gallery } from './Gallery';
 export { default as Contact } from './Contact';
 export { default as SimilarProperties } from './SimilarProperties';
 export { default as Footer } from './Footer';
+export { default as Cookie } from './Cookie';

@@ -39,7 +39,7 @@ RealEstate.propTypes = {
 };
 
 RealEstate.defaultProps = {
-  url: 'https://e23-milano.com',
+  url: 'https://pager.land/next/',
 };
 
 export default RealEstate;
