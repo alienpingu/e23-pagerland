@@ -16,5 +16,11 @@ export const CookieWrapper = styled.div`
   &.hide {
     display:none;
   }
+    @media only screen and (max-width: 600px) {
+  p {
+    display:none;
+
+    }
+}
 `;
 
