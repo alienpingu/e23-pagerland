@@ -6,6 +6,7 @@ import { useCookies } from 'react-cookie';
 function Cookie() {
   const [cookies, setCookie] = useCookies(['policy']);
 
+
   return (
     (Boolean(!cookies.policy)) ? <CookieWrapper>
     <div>

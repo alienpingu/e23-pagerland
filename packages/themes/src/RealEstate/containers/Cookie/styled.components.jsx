@@ -13,6 +13,8 @@ export const CookieWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.75s both;
+  z-index: 9999;
   &.hide {
     display:none;
   }
@@ -22,5 +24,30 @@ export const CookieWrapper = styled.div`
 
     }
 }
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 `;
+
 
