@@ -31,6 +31,7 @@ const RealEstate = ({ url }) => (
       <link href={theme.typography.googleFont} rel="stylesheet" />
       <meta name="theme-color" content={theme.colors.primary} />
       <meta property="og:image" content={`${url}${preview}`} />
+
     </Head>
     <SEO title="E23" />
     <Navbar />

@@ -27,26 +27,25 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" sizes="256x256" href="/next/icons/icon-256x256.png" />
           <link rel="apple-touch-icon" sizes="384x384" href="/next/icons/icon-384x384.png" />
           <link rel="apple-touch-icon" sizes="512x512" href="/next/icons/icon-512x512.png" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210310079-1"></script>
+
         </Head>
         <body>
+              <script
+      dangerouslySetInnerHTML={{
+        __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-210310079-1');
+          `,
+      }}
+    />
           <Main />
           <div id="portal" />
           <CookiesProvider>
             <NextScript />
           </CookiesProvider>
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=GTM-MQ7T65H`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'GTM-MQ7T65H');`,
-            }}
-          />
         </body>
       </html>
     );
