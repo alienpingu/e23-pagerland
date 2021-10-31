@@ -17,7 +17,7 @@ import SEO from '../../components/SEO';
 function Cookie ({ url }) {
 
   const [cookies, setCookie] = useCookies(['policy']);
-
+  console.log(cookies.policy)
   return(
     <Theme>
       <Head>
@@ -38,7 +38,7 @@ function Cookie ({ url }) {
         <p>Scopra di più su chi siamo, come può contattarci e come trattiamo i dati personali nella nostra <Link href="/policy">Informativa sulla privacy.</Link></p>
         <p>Il suo consenso si applica ai seguenti siti web: www.e23-milano.com</p>
         {
-          (Boolean(cookies.policy)) ?  <Button 
+          (Boolean(cookies.policy === 'true')) ?  <Button 
               variant="brand" 
               background="#174a5b" 
               color="#fff"
