@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const CookieWrapper = styled.div`
   position: fixed;
-  height:140px;
-  font-size:14px;
+  min-height:140px;
+  font-size:16px;
   background: #174a5b;
   bottom: 0;
   color: #fff;
   left: 0;
   width:100%;
-  padding: 0.5rem 2.5rem; 
+  padding: 0.5rem 5rem; 
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,12 +18,26 @@ export const CookieWrapper = styled.div`
   &.hide {
     display:none;
   }
-    @media only screen and (max-width: 600px) {
-  p {
-    display:none;
-
-    }
+  div:first-child {
+    width: 100%;
+  }
+  div:last-child {
+    margin-left: 12px;
+  }
+@media only screen and (max-width: 600px) {
+      padding: 0.5rem;
+      flex-direction: column;
+      div {
+         width: 100%;
+         button {
+          width: 100%;
+          margin-bottom: 6px;
+         }
+      }
 }
+
+
+
 @-webkit-keyframes fade-in-bottom {
   0% {
     -webkit-transform: translateY(50px);

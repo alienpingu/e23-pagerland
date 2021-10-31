@@ -11,7 +11,17 @@ function Cookie() {
     (Boolean(!cookies.policy)) ? <CookieWrapper>
     <div>
       <h4>Questo sito usa i Cookie 🍪</h4>
-      <p>{cookies.policy} Utilizziamo i cookie per personalizzare contenuti ed annunci, per fornire funzionalità dei social media e per analizzare il nostro traffico. Condividiamo inoltre informazioni sul modo in cui utilizza il nostro sito con i nostri partner che si occupano di analisi dei dati web, pubblicità e social media, i quali potrebbero combinarle con altre informazioni che ha fornito loro o che hanno raccolto dal suo utilizzo dei loro servizi. Acconsenta ai nostri cookie se continua ad utilizzare il nostro sito web.</p>
+      <p>Utilizziamo i cookie tecnici strettamente necessari ad un corretto funzionamento del sito e cookie di analisi statistica anonima</p>
+    </div>
+    <div>
+      <Button 
+        variant="brand" 
+        color="#fff" 
+        background="#174a5b"
+        border="1px solid #fff"
+        onClick={(e) => setCookie('policy', false, { path: '/' })}
+      >Rifiuta</Button>
+
     </div>
     <div>
       <Button 
@@ -21,6 +31,7 @@ function Cookie() {
         onClick={(e) => setCookie('policy', true, { path: '/' })}
       >Ho capito</Button>
     </div>
+
   </CookieWrapper> : <span></span>
   )
 };
