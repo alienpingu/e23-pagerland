@@ -25,7 +25,7 @@ function Index({ description, meta, title }) {
 
 Index.defaultProps = {
   meta: [],
-  description: `E23 Srl`,
+  description: `E23 Srl - Il tuo spazio esclusivo per lavorare`,
 };
 
 Index.propTypes = {
